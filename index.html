@@ -8,75 +8,230 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <header class="row container">
-      <a href="#" class="logo"><img src="./Images/logo.jpeg" alt="logo" /></a>
+    <!-- Header & Navigation -->
+    <header class="row container" id="Home">
+      <div  class="logo"><img src="./Images/logo.jpeg" alt="logo" /></div>
       <div class="toggleMenu" onclick="toggleMenu()"></div>
       <nav class="navigation">
         <ul class="primary-links row">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#Contact">Contact</a></li>
         </ul>
+        
         <ul class="secondary-links row">
-          <!-- <li><a href="#">login</a></li>
-          <li><a href="#" class="page-btn active">Register</a></li> -->
           <li class="lightDark-row" onclick="lightDark()">
-            <img src="./Images/light_dark-mode.png" alt="" />
+           
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+            >
+              <svg
+                class="sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg
+                class="moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                />
+              </svg>
+            </button>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content row container">
-        <div>
-          <h1>We Build Digital experiences that scale.</h1>
-          <p>
-            Prodesk IT partners with growing brands to design, build, and deploy
-            web presences engineered for conversion — from first pixel to full
-            launch.
-          </p>
+    <main>
+      <section class="hero">
+        <div class="hero-content row container">
+          <div>
+            <h1>We Build Digital experiences that scale.</h1>
+            <p>
+              We design, engineer and ship products for teams who'd rather move
+              fast with precision than fast with duct tape.
+            </p>
 
-          <a href="www.google.com"><button>Get Started</button></a>
+            <a href="#Contact" class="button">Get Started</a>
 
-          <!-- <a href="#" class="page-btn row"> write to us </a> -->
+            <a href="#Services" class="btn">View Our Work</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section >
 
-    <!-- Text -->
-    <section class="text column grid container" id="service">
-      <div>
-        <h3>Precision Engineering</h3>
-        <p>
-          We don't just write code; we architect systems. From the first line of
-          logic to the final deployment, we adhere to rigorous enterprise
-          standards. Our solutions are built to be robust, secure, and scalable,
-          minimizing technical debt and maximizing operational uptime.
-        </p>
-      </div>
-      <div>
-        <h3>Global Scalability</h3>
-        <p>
-          Your business never sleeps, neither do we. With delivery capabilities
-          across time zones, we offer a 'Follow the Sun' development model. We
-          help local enterprises transform into global powerhouses by building
-          infrastructure handling millions of transactions without failure.
-        </p>
-      </div>
-      <div>
-        <h3>Intelligent Future</h3>
-        <p>
-          The era of static software is over. We build intelligent, self-healing
-          ecosystems driven by AI and data analytics. We help you move beyond
-          simple digitization to true digital transformation, ensuring your
-          business stays ahead of the technology curve for the next decade.
-        </p>
-      </div>
-    </section>
+
+      <section class="hero" id="Services">
+        <div class="desc">
+          <span>WHAT WE DO</span>
+          <h2>Three Disciplines.</h2>
+          <h2>One Outcome.</h2>
+          <p>
+            Every engagement draws on the same core toolkit — tuned to what your
+            product actually needs, not what's trending this quarter.
+          </p>
+        </div>
+      <hr/>
+      </section>
+
+      <!-- Text -->
+      <section class="text column grid container" id="service">
+        <div>
+          <h3>SEO &amp; Search Strategy</h3>
+          <p>
+            Technical audits, content architecture and link strategy built to
+            compound — so your ranking gains outlast the algorithm update that
+            caused them.
+          </p>
+          <span class="tag mono">SEARCH / ORGANIC GROWTH</span>
+        </div>
+        <div>
+          <h3>Website development</h3>
+          <p>
+            Hand-built front ends and resilient back ends — accessible by
+            default, fast on a bad connection, and built to be maintained by the
+            next engineer, not just you.
+          </p>
+          <span class="tag mono">ENGINEERING / PRODUCT</span>
+        </div>
+        <div>
+          <h3>Digital Marketing</h3>
+          <p>
+            Positioning, campaigns and lifecycle messaging tied to real revenue
+            metrics — not vanity dashboards nobody on your team actually checks.
+          </p>
+          <span class="tag mono">ACQUISITION / RETENTION</span>
+        </div>
+      </section>
+      <hr>
+
+      <!-- About -->
+      <section id="About">
+        <div class="wrap about-grid">
+          <div>
+            <span>ABOUT THE STUDIO</span>
+            <h2>Small team. No handoffs. No guesswork.</h2>
+          </div>
+          <div class="about-copy reveal">
+            <p>
+              Fielding &amp; Co. is a small studio that treats a website the way
+              an engineer treats a blueprint — every measurement justified,
+              every line load-bearing. No template dressed up as a "custom
+              build," no fifteen-person account chain between you and the person
+              writing your code.
+            </p>
+            <p>
+              We work with founders and small teams who need something shipped
+              correctly the first time: fast to load, easy to maintain, and
+              built with the next hire in mind.
+            </p>
+            <div class="stat-list">
+              <div class="stat">
+                <b>120+</b><span class="mono">PROJECTS SHIPPED</span>
+              </div>
+              <div class="stat">
+                <b>98%</b><span class="mono">CLIENT RETENTION</span>
+              </div>
+              <div class="stat">
+                <b>1.2s</b><span class="mono">AVG. LOAD TIME</span>
+              </div>
+              <div class="stat">
+                <b>4</b><span class="mono">TIME ZONES COVERED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <!-- Contact -->
+      <section id="Contact">
+        <div class="wrap contact-grid">
+          <div class="contact-info reveal">
+            <span class="eyebrow-mono mono">GET STARTED</span>
+            <h2>
+              Tell us what you're building.
+            </h2>
+            <p>
+              One short brief is all we need to scope a project. We reply to
+              every inquiry within one business day.
+            </p>
+            <a class="email" href="mailto:hello@fieldingandco.studio"
+              >hello@TechIT.studio</a
+            >
+          </div>
+          <form
+            class="reveal"
+            id="contactForm"
+            style="transition-delay: 0.1s"
+            novalidate
+          >
+            <div class="field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="field">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Send Message
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+            <p
+              class="form-status"
+              id="formStatus"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
