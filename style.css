@@ -8,8 +8,18 @@
     color: var(--cl--2--); 
     
 }
+
+main >* {
+    display: block;
+}
+
+
 h1,h2,h3 {
     font-family: 'Space Grotesk','Trebuchet MS', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 body {
