@@ -35,7 +35,19 @@ body {
     display: flex;
 }
 
+/* Navigation */
+header {
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--cl--2--);   
+    z-index: 998; 
 
+}
 
 header .row.container{
     align-items: center;
@@ -63,10 +75,10 @@ header .row.container{
     --cl--1--:#121212;
     --cl--2--:#ffffff;
     --cl--4--:#bbdefb;
-    --cl--11--:0b0f1a;
-    --cl--9--:94a3b8;
+    --cl--11--:#0b0f1a;
+    --cl--9--:#94a3b8;
     --cl--10--:#6d8bff;
-    --cl--dark--:#F5F6F3;
+    --cl--dark:#121212;
     --shadow--:0px 0px 5px 0px rgba(255,255,255,0.1);
 }
 
@@ -131,15 +143,7 @@ ul {
 
 }
 
-/* Navigation */
-header {
-    align-items: center;
-    justify-content: space-between;
-    gap: 2em;
-    padding: 1em 0;
-    
 
-}
 
 nav {
     align-items: center;
@@ -167,7 +171,7 @@ nav a {
 }
 
 .primary-links a::after ,.text div:after{
-    /* content: ""; */
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
@@ -205,12 +209,13 @@ nav a:hover, .text div:hover h3{
 .theme-toggle {
     width: 38px;
     height: 38px;
-    border: 1px #3a4048;
+    border: 1px solid var(--cl--4--);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    background: transparent;
+    cursor: pointer;
 }
 
 /* Page Button */
@@ -267,7 +272,6 @@ nav a:hover, .text div:hover h3{
 /* Hero Section */
 .hero {
     background-repeat: no-repeat;
-    /* background-color: #f5f6f3; */
     background-position: right center;
     background-size: 60px 60px;
     position: relative;
@@ -294,7 +298,9 @@ nav a:hover, .text div:hover h3{
     bottom: 1.5em; right: 2em;
 }
 
-
+#contactForm {
+    transition-delay: 0.1s;
+}
 
 .hero-content div {
     max-width: 800px;
@@ -541,6 +547,7 @@ h3 {
         background-size: 30px;
         width: 30px;
         height: 30px;
+        margin-right: 10px;
         z-index: 1000;
         transition: background-size 0.5s ease-in-out;
     }
@@ -594,6 +601,75 @@ h3 {
     }
 }
 
+
+@media screen and (max-width: 576px) {
+    .about-grid,.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .desc {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        margin-left: 20px;
+    }
+
+    .desc span, .desc h2, .desc p {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .desc p {
+        margin-top: 1em;
+        margin-left: 20px;
+    }
+
+    #service {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: clamp(26px, 8vw, 36px);
+        line-height: 1.15;
+    }
+    h2 {
+        font-size: clamp(22px, 7vw, 30px);
+        margin-left: 0;
+    }
+
+    .button, .btn {
+        font-size: 14px;
+        padding: 0.5em 1.5em;
+    }
+
+    .stat-list {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .icon-circle {
+        width: 42px;
+        height: 42px;
+    }
+
+    #service > div {
+        padding: 1.5em 1.25em 1.25em;
+    }
+
+    .field input,
+    .field textarea {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 2em 1em;
+    }
+
+
+}
 
 .field{
     margin-bottom: 1.5em;
