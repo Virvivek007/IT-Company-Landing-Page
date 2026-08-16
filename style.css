@@ -57,10 +57,19 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: var(--cl--11--);   
     z-index: 998; 
-    
+    background: transparent;
 
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    /* -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px); */
+    background-color: var(--cl--11--);
 }
 
 header .row.container{
@@ -95,7 +104,6 @@ header .row.container{
     --cl--13--:#04133d;
     --cl--dark:#121212;
     --shadow--:0px 0px 5px 0px rgba(255,255,255,0.1); 
-
 }
 
 body:after {
@@ -415,7 +423,6 @@ h2 {
     gap: 1rem;
     margin-top: 2.6rem;
     font-weight: 500;
-    /* font-family:'Times New Roman', Times, serif; */
     font-size: 16px;
     color: var(--cl--1--);
     text-transform: uppercase;
