@@ -3,7 +3,7 @@ A fast, accessible landing page for ProdeskIT, a software IT company offering we
 
 Live site: https://it-company-landing-page-gamma.vercel.app/
 
-<img href= "" />
+<img href= "webPage_Screenshot.png" />
 
 ## Tech Stack
 
