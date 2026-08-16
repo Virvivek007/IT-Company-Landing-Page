@@ -10,9 +10,15 @@
   <body>
     <!-- Header & Navigation -->
     <header>
-      <!-- <div class="row container"></div> -->
-      <div  class="logo"><img src="./Images/logo.jpeg" alt="logo" /></div>
-      <div class="toggleMenu" onclick="toggleMenu()"></div>
+      <div class="logo"><img src="./Images/logo.jpeg" alt="logo" /></div>
+      <button
+        type="button"
+        id="toggle"
+        class="toggleMenu"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      ></button>
       <nav class="navigation">
         <ul class="primary-links row">
           <li><a href="#Home">Home</a></li>
@@ -20,10 +26,9 @@
           <li><a href="#Services">Services</a></li>
           <li><a href="#Contact">Contact</a></li>
         </ul>
-        
+
         <ul class="secondary-links row">
           <li class="lightDark-row" onclick="lightDark()">
-           
             <button
               class="theme-toggle"
               id="themeToggle"
@@ -78,8 +83,7 @@
             <a href="#Services" class="btn">View Our Work</a>
           </div>
         </div>
-      </section >
-
+      </section>
 
       <section class="hero" id="Services" data-page="Services">
         <div class="desc">
@@ -91,11 +95,15 @@
             product actually needs, not what's trending this quarter.
           </p>
         </div>
-      <hr/>
+        <hr />
       </section>
 
       <!-- Text -->
-      <section class="text column grid container" id="service" data-page="Services">
+      <section
+        class="text column grid container"
+        id="service"
+        data-page="Services"
+      >
         <div>
           <h3>SEO &amp; Search Strategy</h3>
           <p>
@@ -123,27 +131,28 @@
           <span class="tag mono">ACQUISITION / RETENTION</span>
         </div>
       </section>
-      <hr>
+      <hr />
 
       <!-- About -->
       <section id="About" data-page="About">
         <div class="wrap about-grid">
           <div>
-            <span>ABOUT THE STUDIO</span>
+            <span>ABOUT THE COMPANY</span>
             <h2>Small team. No handoffs. No guesswork.</h2>
           </div>
           <div class="about-copy reveal">
             <p>
-              Fielding &amp; Co. is a small studio that treats a website the way
+              Prodesk IT is a software IT company that treats a website the way
               an engineer treats a blueprint — every measurement justified,
               every line load-bearing. No template dressed up as a "custom
-              build," no fifteen-person account chain between you and the person
-              writing your code.
+              build," no fifteen-person account chain between you and the people
+              building your product.
             </p>
             <p>
-              We work with founders and small teams who need something shipped
-              correctly the first time: fast to load, easy to maintain, and
-              built with the next hire in mind.
+              We work with founders and businesses who need it shipped correctly
+              the first time — website development, SEO, and digital marketing
+              handled under one roof, built to load fast, scale cleanly, and
+              stay easy to maintain as your team grows.
             </p>
             <div class="stat-list">
               <div class="stat">
@@ -162,28 +171,22 @@
           </div>
         </div>
       </section>
-      <hr>
+      <hr />
       <!-- Contact -->
       <section id="Contact" data-page="Contact">
         <div class="wrap contact-grid">
           <div class="contact-info reveal">
             <span class="eyebrow-mono mono">GET STARTED</span>
-            <h2>
-              Tell us what you're building.
-            </h2>
+            <h2>Tell us what you're building.</h2>
             <p>
               One short brief is all we need to scope a project. We reply to
               every inquiry within one business day.
             </p>
-            <a class="email" href="mailto:hello@fieldingandco.studio"
-              >hello@TechIT.studio</a
+            <a class="email" href="mailto:prodeskIT@gmail.in"
+              >prodeskIT@Tech.in</a
             >
           </div>
-          <form
-            class="reveal"
-            id="contactForm"
-            novalidate
-          >
+          <form class="reveal" id="contactForm" novalidate>
             <div class="field">
               <label for="name">Name</label>
               <input
@@ -236,10 +239,18 @@
     <!-- Footer -->
     <footer>
       <div class="social-app">
-        <a href="https://www.facebook.com/"><img src="./Images/facebook-logo.png" alt="Facebook" /></a>
-        <a href="https://www.google.com/"><img src="./Images/google-logo.png" alt="Google" /></a>
-        <a href="https://www.instagram.com/"><img src="./Images/insta-logo.png" alt="Instagram" /></a>
-        <a href="https://www.linkedin.com/"><img src="./Images/linkedin-logo.png" alt="LinkedIn" /></a>
+        <a href="https://www.facebook.com/"
+          ><img src="./Images/facebook-logo.png" alt="Facebook"
+        /></a>
+        <a href="https://www.google.com/"
+          ><img src="./Images/google-logo.png" alt="Google"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="./Images/insta-logo.png" alt="Instagram"
+        /></a>
+        <a href="https://www.linkedin.com/"
+          ><img src="./Images/linkedin-logo.png" alt="LinkedIn"
+        /></a>
       </div>
       <div>
         <p>Copyright © 2026 Prodesk IT. All Rights Reserved.</p>
