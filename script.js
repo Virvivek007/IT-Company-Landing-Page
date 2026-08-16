@@ -2,7 +2,8 @@
 function toggleMenu() {
   const toggleMenu = document.querySelector(".toggleMenu");
   const navigation = document.querySelector(".navigation");
-  toggleMenu.classList.toggle("active");
+  const isActive = toggleMenu.classList.toggle("active");
+  toggleMenu.setAttribute("aria-expanded", isActive);
   navigation.classList.toggle("active");
 }
 
