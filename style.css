@@ -8,10 +8,26 @@
     color: var(--cl--2--); 
 }
 
+
+
 main >* {
     display: block;
 }
 
+.desc span,
+.tag.mono,
+.stat span.mono,
+.fig-label,
+.scale-label {
+    color: #64748b;
+}
+
+.toggleMenu {
+    /* display: none; */
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
 section[id] {
     scroll-margin-top: 90px;
 }
@@ -61,6 +77,8 @@ header {
     background: transparent;
 
 }
+
+
 
 header::before {
     content: "";
@@ -587,7 +605,6 @@ h3 {
         z-index: 1000;
         transition: background-size 0.5s ease-in-out;
     }
-    
 
     .toggleMenu.active {
         position: relative;
@@ -642,8 +659,9 @@ h3 {
     .about-grid,.contact-grid {
         grid-template-columns: 1fr;
         gap: 2em;
+        align-items: center;
+        justify-content: center;
     }
-
     .desc {
         grid-template-columns: 1fr;
         grid-auto-flow: row;
